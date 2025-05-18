@@ -10,6 +10,8 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useToast } from "@/hooks/use-toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+const stripeKey = import.meta.env.VITE_STRIPE_KEY;
+
 
 // Schema for email notification settings
 const notificationFormSchema = z.object({
@@ -56,7 +58,7 @@ const PreferencesAdmin = () => {
   const apiForm = useForm<z.infer<typeof apiFormSchema>>({
     resolver: zodResolver(apiFormSchema),
     defaultValues: {
-      apiKey: "",
+      apiKey: stripeKey,
       webhookUrl: "https://api.example.com/webhooks/ces",
       allowPublicAccess: false,
       rateLimitPerMinute: 100,
