@@ -75,28 +75,38 @@ export type TranslationKey =
 | 'status.verified'
 | 'account.totalSubmissions'
   // Admin sections
-  | 'admin.complaints'
-  | 'admin.citizens'
-  | 'admin.preferences'
-  | 'admin.account'
-  | 'admin.search'
-  | 'admin.filter'
-  | 'admin.category'
-  | 'admin.status'
-  | 'admin.title'
-  | 'admin.actions'
-  | 'admin.viewDetails'
-  | 'admin.complaintDetails'
-  | 'admin.reviewRespond'
-  | 'admin.description'
-  | 'admin.location'
-  | 'admin.submissionDate'
-  | 'admin.lastUpdated'
-  | 'admin.previousResponse'
-  | 'admin.sendResponse'
-  | 'admin.responsePrompt'
-  | 'admin.cancel'
-  | 'admin.send'
+  | 'admin.dashboard.title'
+| 'admin.dashboard.subtitle'
+| 'admin.stats.total'
+| 'admin.stats.totalDesc'
+| 'admin.stats.pending'
+| 'admin.stats.pendingDesc'
+| 'admin.stats.inProgress'
+| 'admin.stats.inProgressDesc'
+| 'admin.stats.resolved'
+| 'admin.stats.resolvedDesc'
+| 'admin.tabs.complaints'
+| 'admin.tabs.analytics'
+| 'admin.analytics.categoryTitle'
+| 'admin.analytics.categoryDesc'
+| 'admin.analytics.statusTitle'
+| 'admin.analytics.statusDesc'
+| 'admin.analytics.responseTitle'
+| 'admin.analytics.responseDesc'
+| 'admin.table.id'
+| 'admin.table.title'
+| 'admin.table.category'
+| 'admin.table.status'
+| 'admin.table.date'
+| 'admin.table.actions'
+| 'admin.updateStatus'
+| 'admin.responsePlaceholder'
+| 'admin.responseLabel'
+| 'admin.viewDetails'
+| 'admin.view'
+| 'admin.sendResponse'
+| 'admin.cancel'
+
   | 'language'
   | 'theme.light'
   | 'theme.dark'
@@ -389,28 +399,37 @@ export const translations: Record<LanguageCode, Record<TranslationKey, string>> 
     'cta.submit': 'Submit a Complaint',
     'cta.dashboard': 'View Dashboard',
     'footer.rights': 'All rights reserved.',
-    'admin.complaints': 'Complaints Management',
-    'admin.citizens': 'Citizens',
-    'admin.preferences': 'Preferences',
-    'admin.account': 'Account',
-    'admin.search': 'Search complaints...',
-    'admin.filter': 'Filter',
-    'admin.category': 'Category',
-    'admin.status': 'Status',
-    'admin.title': 'Title',
-    'admin.actions': 'Actions',
-    'admin.viewDetails': 'View Details',
-    'admin.complaintDetails': 'Complaint Details',
-    'admin.reviewRespond': 'Review and respond to this complaint',
-    'admin.description': 'Description',
-    'admin.location': 'Location',
-    'admin.submissionDate': 'Submission Date',
-    'admin.lastUpdated': 'Last Updated',
-    'admin.previousResponse': 'Previous Response',
-    'admin.sendResponse': 'Send Response',
-    'admin.responsePrompt': 'Type your response to the citizen here...',
-    'admin.cancel': 'Cancel',
-    'admin.send': 'Send Response',
+    'admin.dashboard.title': 'Admin Dashboard',
+  'admin.dashboard.subtitle': 'Manage and respond to citizen complaints',
+  'admin.stats.total': 'Total',
+  'admin.stats.totalDesc': 'All complaints',
+  'admin.stats.pending': 'Pending',
+  'admin.stats.pendingDesc': 'Require attention',
+  'admin.stats.inProgress': 'In Progress',
+  'admin.stats.inProgressDesc': 'Being addressed',
+  'admin.stats.resolved': 'Resolved',
+  'admin.stats.resolvedDesc': 'Successfully addressed',
+  'admin.tabs.complaints': 'Manage Complaints',
+  'admin.tabs.analytics': 'Analytics',
+  'admin.analytics.categoryTitle': 'Complaints by Category',
+  'admin.analytics.categoryDesc': 'Distribution of complaints across different departments',
+  'admin.analytics.statusTitle': 'Complaints by Status',
+  'admin.analytics.statusDesc': 'Current status of all complaints in the system',
+  'admin.analytics.responseTitle': 'Response Time Analysis',
+  'admin.analytics.responseDesc': 'Average time taken to respond to complaints',
+  'admin.table.id': '#',
+  'admin.table.title': 'Title',
+  'admin.table.category': 'Category',
+  'admin.table.status': 'Status',
+  'admin.table.date': 'Submission Date',
+  'admin.table.actions': 'Actions',
+  'admin.updateStatus': 'Update Status',
+  'admin.responsePlaceholder': 'Type your response to the citizen here...',
+  'admin.responseLabel': 'Send Response',
+  'admin.viewDetails': 'View Details',
+  'admin.view': 'View',
+  'admin.sendResponse': 'Send Response',
+  'admin.cancel': 'Cancel',
     'language': 'Language',
     'theme.light': 'Light',
     'theme.dark': 'Dark',
@@ -712,28 +731,37 @@ export const translations: Record<LanguageCode, Record<TranslationKey, string>> 
     'cta.submit': 'Tanga Ikibazo',
     'cta.dashboard': 'Reba Ikibaho',
     'footer.rights': 'Uburenganzira bwose bwihariwe.',
-    'admin.complaints': 'Imicungire y\'Ibibazo',
-    'admin.citizens': 'Abaturage',
-    'admin.preferences': 'Amahitamo',
-    'admin.account': 'Konti',
-    'admin.search': 'Shakisha ibibazo...',
-    'admin.filter': 'Shungura',
-    'admin.category': 'Icyiciro',
-    'admin.status': 'Uko Bigeze',
-    'admin.title': 'Umutwe',
-    'admin.actions': 'Ibikorwa',
-    'admin.viewDetails': 'Reba Birambuye',
-    'admin.complaintDetails': 'Ibisobanuro by\'Ikibazo',
-    'admin.reviewRespond': 'Reba kandi usubize iki kibazo',
-    'admin.description': 'Igisobanuro',
-    'admin.location': 'Aho Biherereye',
-    'admin.submissionDate': 'Itariki Byatangiwe',
-    'admin.lastUpdated': 'Igihe Byaherutsemo Kuvugururwa',
-    'admin.previousResponse': 'Igisubizo Cyabanje',
-    'admin.sendResponse': 'Ohereza Igisubizo',
-    'admin.responsePrompt': 'Andika igisubizo cyawe hano...',
-    'admin.cancel': 'Kureka',
-    'admin.send': 'Ohereza Igisubizo',
+    'admin.dashboard.title': 'Ikibaho cy\'Ubuyobozi',
+  'admin.dashboard.subtitle': 'Gucunga no gusubiza ibibazo by\'abaturage',
+  'admin.stats.total': 'Igiteranyo',
+  'admin.stats.totalDesc': 'Ibibazo byose',
+  'admin.stats.pending': 'Bitegereje',
+  'admin.stats.pendingDesc': 'Bisabwa itabara',
+  'admin.stats.inProgress': 'Biri Gukorwa',
+  'admin.stats.inProgressDesc': 'Biri gucungwa',
+  'admin.stats.resolved': 'Byakemutse',
+  'admin.stats.resolvedDesc': 'Byakemutse neza',
+  'admin.tabs.complaints': 'Gucunga Ibibazo',
+  'admin.tabs.analytics': 'Ibisubizo',
+  'admin.analytics.categoryTitle': 'Ibibazo Bishingiye ku Byiciro',
+  'admin.analytics.categoryDesc': 'Igabanya ry\'ibibazo mu byiciro bitandukanye',
+  'admin.analytics.statusTitle': 'Ibibazo Bishingiye ku Miterere',
+  'admin.analytics.statusDesc': 'Imiterere y\'ibibazo byose muri sisitemu',
+  'admin.analytics.responseTitle': 'Ibisubizo ku Gihe cyo Gusubiza',
+  'admin.analytics.responseDesc': 'Igihe gisanzwe cyo gusubiza ibibazo',
+  'admin.table.id': '#',
+  'admin.table.title': 'Umutwe',
+  'admin.table.category': 'Icyiciro',
+  'admin.table.status': 'Imiterere',
+  'admin.table.date': 'Itariki Byatanzwe',
+  'admin.table.actions': 'Ibikorwa',
+  'admin.updateStatus': 'Hindura Imiterere',
+  'admin.responsePlaceholder': 'Andika igisubizo cyawe kuri uyu muturage hano...',
+  'admin.responseLabel': 'Ohereza Igisubizo',
+  'admin.viewDetails': 'Reba Ibisobanuro',
+  'admin.view': 'Reba',
+  'admin.sendResponse': 'Ohereza Igisubizo',
+  'admin.cancel': 'Kureka',
     'language': 'Ururimi',
     'theme.light': 'Urumuri',
     'theme.dark': 'Umwijima',

@@ -24,22 +24,24 @@ export interface Complaint {
 }
 
 export const departments: Record<Department, string> = {
-  'roads': 'Roads & Infrastructure',
-  'sanitation': 'Sanitation & Waste',
-  'water': 'Water & Sewage',
-  'electricity': 'Electricity & Power',
-  'parks': 'Parks & Recreation',
-  'public-safety': 'Public Safety',
-  'other': 'Other Services'
+  'roads': 'Imihanda n’Ibikorwa remezo',
+  'sanitation': 'Isuku n’Imyanda',
+  'water': 'Amazi n’Amashanyarazi',
+  'electricity': 'Amashanyarazi n’Imbaraga',
+  'parks': 'Pariki n’Imyidagaduro',
+  'public-safety': 'Umutekano rusange',
+  'other': 'Ibindi serivisi'
 };
 
+
 export const statusLabels: Record<ComplaintStatus, string> = {
-  'pending': 'Pending Review',
-  'under-review': 'Under Review',
-  'in-progress': 'In Progress',
-  'resolved': 'Resolved',
-  'rejected': 'Rejected'
+  'pending': 'Irimo gutegerezwa',
+  'under-review': 'Irimo gusuzumwa',
+  'in-progress': 'Irimo gukorwa',
+  'resolved': 'Yakemutse',
+  'rejected': 'Yanzwe'
 };
+
 
 export const statusColors: Record<ComplaintStatus, string> = {
   'pending': 'bg-yellow-100 text-yellow-800',
@@ -143,25 +145,25 @@ export const adminUsers = [
 // Analytical Data
 export const analyticalData = {
   complaintsByCategory: [
-    { name: 'Roads & Infrastructure', value: 35 },
-    { name: 'Sanitation & Waste', value: 25 },
-    { name: 'Water & Sewage', value: 15 },
-    { name: 'Electricity & Power', value: 12 },
-    { name: 'Parks & Recreation', value: 8 },
-    { name: 'Public Safety', value: 5 },
-    { name: 'Other Services', value: 3 }
+    { name: 'Imihanda n’Ibikorwa remezo', value: 35 },
+    { name: 'Isuku n’Imyanda', value: 25 },
+    { name: 'Amazi n’Amashanyarazi', value: 15 },
+    { name: 'Amashanyarazi n’Imbaraga', value: 12 },
+    { name: 'Pariki n’Imyidagaduro', value: 8 },
+    { name: 'Umutekano rusange', value: 5 },
+    { name: 'Ibindi serivisi', value: 3 }
   ],
   complaintsByStatus: [
-    { name: 'Pending Review', value: 28 },
-    { name: 'Under Review', value: 22 },
-    { name: 'In Progress', value: 30 },
-    { name: 'Resolved', value: 15 },
-    { name: 'Rejected', value: 5 }
+    { name: 'Irimo gutegerezwa', value: 28 },
+    { name: 'Irimo gusuzumwa', value: 22 },
+    { name: 'Irimo gukorwa', value: 30 },
+    { name: 'Yakemutse', value: 15 },
+    { name: 'Yanzwe', value: 5 }
   ],
   responseTime: [
-    { name: 'Less than 24 hours', value: 20 },
-    { name: '1-3 days', value: 45 },
-    { name: '3-7 days', value: 25 },
-    { name: 'More than 7 days', value: 10 }
+    { name: 'Munsi y’amasaha 24', value: 20 },
+    { name: 'Iminsi 1-3', value: 45 },
+    { name: 'Iminsi 3-7', value: 25 },
+    { name: 'Hejuru y’iminsi 7', value: 10 }
   ]
 };
